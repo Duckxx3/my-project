@@ -10,24 +10,62 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            background-color: #ffffff;
+            color: #004d00;
         }
         header {
-            background: #333;
-            color: #fff;
+            background: #004d00;
+            color: #ffffff;
             padding: 1rem 0;
             text-align: center;
         }
         nav {
-            background: #555;
-            color: #fff;
+            background: #004d00;
+            color: #ffffff;
             display: flex;
-            justify-content: center;
-            gap: 1rem;
-            padding: 0.5rem;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
         }
         nav a {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background: #ffffff;
+            margin: 3px 0;
+        }
+        .nav-links {
+            display: flex;
+        }
+        .nav-links a {
+            padding: 0.5rem;
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #004d00;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                padding: 1rem;
+            }
+            .nav-links.active {
+                display: flex;
+            }
         }
         section {
             padding: 2rem;
@@ -35,14 +73,14 @@
             margin: auto;
         }
         footer {
-            background: #333;
-            color: #fff;
+            background: #004d00;
+            color: #ffffff;
             text-align: center;
             padding: 1rem 0;
             margin-top: 2rem;
         }
         .card {
-            border: 1px solid #ddd;
+            border: 1px solid #004d00;
             border-radius: 5px;
             padding: 1rem;
             margin: 1rem 0;
@@ -57,9 +95,16 @@
     </header>
 
     <nav>
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
 
     <section id="about">
@@ -97,5 +142,12 @@
     <footer>
         <p>&copy; 2024 [Your Name]. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
