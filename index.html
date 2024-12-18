@@ -97,9 +97,11 @@
             margin: 2rem 0;
         }
         .photo img {
-            max-width: 100%;
+            max-width: 80%; /* Set maximum width to 80% of the parent container */
             height: auto;
             border-radius: 10px;
+            margin: 0 auto; /* Center the image horizontally */
+            display: block; /* Ensure the image is displayed as a block-level element */
         }
         @media (max-width: 480px) {
             body {
