@@ -14,7 +14,7 @@
             color: #004d00;
         }
         header {
-            background: #004d00;
+            background: #1B4C0F;
             color: #ffffff;
             padding: 1rem 0;
             text-align: center;
@@ -42,6 +42,7 @@
             height: 3px;
             background: #ffffff;
             margin: 3px 0;
+            transition: background 0.3s;
         }
         .nav-links {
             display: flex;
@@ -62,9 +63,14 @@
                 right: 0;
                 width: 100%;
                 padding: 1rem;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                transition: all 0.3s ease;
             }
             .nav-links.active {
                 display: flex;
+            }
+            nav a {
+                padding: 1rem 0;
             }
         }
         section {
@@ -86,6 +92,29 @@
             margin: 1rem 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+        .photo {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .photo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            section {
+                padding: 1rem;
+            }
+            .card {
+                padding: 0.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -101,11 +130,30 @@
             <div></div>
         </div>
         <div class="nav-links">
-            <a href="about.html">About Me</a>
-            <a href="projects.html">Projects</a>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi! I’m Alyssa N, a passionate IT and programming student with a strong drive to build a career in software development.</p>
+        <p>I have a background in PCpro and some knowledge of web design, specializing in CSS.</p>
+        <p>Outside of programming I enjoy Video Games, Documentaries, and naps.</p>
+    </section>
+
+    <div class="photo">
+        <img src="photo.jpg" alt="A photo of me">
+    </div>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="card">
+            <h3>Project Fungi</h3>
+            <p>Currently I am working on making a website to map out current known fungi in the ... that can be added to as needed, helping researchers identify and keeping track of the fungi.</p>
+        </div>
+    </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
@@ -118,7 +166,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Alyssa Nero. All rights reserved.</p>
+        <p>&copy; 2024 Alyssa-Nero. All rights reserved.</p>
     </footer>
 
     <script>
@@ -129,3 +177,5 @@
     </script>
 </body>
 </html>
+
+
