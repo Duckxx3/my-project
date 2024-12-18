@@ -85,18 +85,7 @@
             padding: 1rem 0;
             margin-top: 2rem;
         }
-        .card {
-            border: 1px solid #004d00;
-            border-radius: 5px;
-            padding: 1rem;
-            margin: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
         .photo {
-            text-align: center;
-            margin: 2rem 0;
-        }
-       .photo {
             text-align: center;
             margin: 2rem 0;
         }
@@ -105,11 +94,11 @@
             height: auto;
             border-radius: 10px;
             margin: 0 auto;
-            display: block; 
+            display: block;
         }
-   @media (max-width: 768px) {
+        @media (max-width: 768px) {
             .photo img {
-                max-width: 100%; 
+                max-width: 100%;
             }
         }
         @media (max-width: 480px) {
@@ -117,16 +106,12 @@
                 font-size: 14px;
             }
             header h1 {
-                font-size: 1.5rem;
+                font-size: 1rem;
             }
             section {
-                padding: 1rem;
-            }
-            .card {
                 padding: 0.5rem;
             }
         }
-
     </style>
 </head>
 <body>
@@ -143,7 +128,7 @@
         </div>
         <div class="nav-links">
             <a href="#about">About Me</a>
-            <a href="#projects">Projects</a>
+            <a href="projects.html">Projects</a> <!-- Link to the Projects page -->
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -156,17 +141,8 @@
     </section>
 
     <div class="photo">
-        <img src="photo-of-me.png" alt="A photo of me"
-            width="200" height= "400"  >
+        <img src="photo-of-me.png" alt="A photo of me">
     </div>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="card">
-            <h3>Project Fungi</h3>
-            <p>Currently I am working on making a website to map out current known fungi in the ... that can be added to as needed, helping researchers identify and keeping track of the fungi.</p>
-        </div>
-    </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
